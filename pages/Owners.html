@@ -1,0 +1,38 @@
+﻿<div>
+    <div class="spinner" id="spinner">
+        <img src="../images/spinner.gif" />
+    </div>
+    <div id="bodyContainer">
+        <div class="ownerDetailsContainer">
+            <table>
+                <tr class="ownerDetailsHeaderView">
+                    <th class="ownerDetailHeader">Account #</th>
+                    <th class="ownerDetailHeader">Name</th>
+                    <th class="ownerDetailHeader">Plot #</th>
+                    <th class="ownerDetailHeader">Mobile Number</th>
+                    <th class="ownerDetailHeader">Email ID</th>
+                    <th class="ownerDetailHeader">Resident</th>
+                </tr>
+                <tr class="ownerDetailsView" data-ng-repeat="detail in ownersList">
+                    <td class="bgColor" cssCategory="Owner">{{detail.ownerAccountNo}}</td>
+                    <td class="bgColor" cssCategory="Owner">{{detail.ownerName}}</td>
+                    <td class="bgColor" cssCategory="Owner">{{detail.ownerPlotNo}}</td>
+                    <td class="bgColor" cssCategory="Owner">{{detail.ownerPhoneNumber}}</td>
+                    <td class="bgColor" cssCategory="Owner">{{detail.ownerEmail}}</td>
+                    <td class="bgColor" cssCategory="Owner">{{detail.resident}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="memberFormBackground" id="memberForm">
+            <form ng-submit="submit()" name="newMemberform">
+                <input placeholder="Account Number" type="text" ng-model="ownerAccoutNo" maxlength="8" />
+                <input placeholder="Owner Name" type="text" required ng-model="ownerName" maxlength="15" />
+                <input placeholder="Plot Number" type="number" ng-model="ownerPlotNo" maxlength="3" />
+                <input placeholder="Phone Number" type="number" ng-model="ownerPhoneNumber" maxlength="10" />
+                <input placeholder="Email id" required type="email" ng-model="ownerEmail" autofocus="focus" />
+                <input placeholder="Resident" type="text" ng-model="resident" maxlength="3" />
+                <Button class="newMemberBtn" type="submit">Add</Button>
+            </form>
+        </div>
+    </div>
+</div>

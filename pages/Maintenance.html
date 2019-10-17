@@ -1,0 +1,22 @@
+<div>
+    <div class="spinner" id="spinner">
+        <img src="../images/spinner.gif" />
+    </div>
+    <div id="bodyContainer">
+        <div class="cardContainer">
+            <div class="card" ng-repeat="item in maintExpensesSummary">
+                <div class="summaryItem">{{item.Type}}</div>
+                <table>
+                    <tr>
+                        <th class="receivedHeader">Received</th>
+                        <th class="expenditureHeader">Expenses</th>
+                    </tr>
+                    <tr>
+                        <td class="totalAmountReceived" ng-click="maintSummaryClick(item.Type)">&#x20B9;{{item.TotalReceived}}</td>
+                        <td class="totalAmountExpenditure" ng-click="maintExpensesClick(item.Type)">&#x20B9;{{item.TotalSpent}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

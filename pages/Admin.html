@@ -1,0 +1,64 @@
+﻿<div>
+    <div class="ownerDetailsContainer">
+        <label class="errorMessage" id="errorMessage">{{unAuthorizedMessage}}</label>
+        <div id="adminForm">
+            <div>
+                <label class="expenseHeader">Corpus & CA-Sites Details</label>
+                <button class="newMemberBtn" ng-click="showHideCACorpusFundDetails()">Show/Hide</button>
+                <table id="CACorpusFundDetails">
+                    <tr class="ownerDetailsHeaderView">
+                        <th class="ownerDetailHeader">Account #</th>
+                        <th class="ownerDetailHeader">Corpus Paid Amount</th>
+                        <th class="ownerDetailHeader">Corpus Pending Amount</th>
+                        <th class="ownerDetailHeader">CA-Sites Paid Amount</th>
+                        <th class="ownerDetailHeader">CA-Sites Pending Amount</th>
+                    </tr>
+                    <tr class="ownerDetailsView" data-ng-repeat="detail in ownersList">
+                        <td class="bgColor" cssCategory="Owner">{{detail.ownerAccountNo}}</td>
+                        <td class="bgColor" cssCategory="Owner"><input placeholder="Corpus Paid" required type="number" ng-model="detail.corpusPaid" />
+                        <td class="bgColor" cssCategory="Owner"><input placeholder="Corpus Pending" required type="number" ng-model="detail.corpusPending" /></td>
+                        <td class="bgColor" cssCategory="Owner"><input placeholder="CA-Sites Paid" required type="number" ng-model="detail.casitePaid" /></td>
+                        <td class="bgColor" cssCategory="Owner"><input placeholder="CA-Sites Pending" required type="number" ng-model="detail.casitePending" /></td>
+                        <td><button class="newMemberBtn" ng-click="updateFundDetails(detail)">Update</button></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <label class="expenseHeader">Corpus Fund Expenses</label>
+                <button class="newMemberBtn" ng-click="showHideCorpusFundExpensesDetails()">Show/Hide</button>
+                <table id="CorpusFundExpenses">
+                    <tr class="ownerDetailsHeaderView">
+                        <th class="ownerDetailHeader">Expense Date</th>
+                        <th class="ownerDetailHeader">Expense Type</th>
+                        <th class="ownerDetailHeader">Expense Amount</th>
+                    </tr>
+                    <tr>
+                        <td class="bgColor" cssCategory="Owner"><input placeholder="Expense Date" required type="date" ng-model="detail.date" />
+                        <td class="bgColor" cssCategory="Owner"><input placeholder="Expense Type" required type="text" ng-model="detail.expenseType" /></td>
+                        <td class="bgColor" cssCategory="Owner"><input placeholder="Expense Amount" required type="number" ng-model="detail.expenseAmount" /></td>
+                        <td><button class="newMemberBtn" ng-click="corpusFundExpense(detail)">Update</button></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <label class="expenseHeader">Maintenance Details</label>
+                <button class="newMemberBtn" ng-click="maintenanceDetails()">Show/Hide</button>
+                <table id="MaintenanceDetails">
+                    <tr class="ownerDetailsHeaderView">
+                        <th class="ownerDetailHeader">Account #</th>
+                        <th class="ownerDetailHeader">For Month</th>
+                        <th class="ownerDetailHeader">Maitenance Paid Amount</th>
+                        <th class="ownerDetailHeader">Maitenance Pending Amount</th>
+                    </tr>
+                    <tr class="ownerDetailsView" data-ng-repeat="detail in ownersList">
+                        <td class="bgColor" cssCategory="Owner">{{detail.ownerAccountNo}}</td>
+                        <td class="bgColor" cssCategory="Owner"><input placeholder="For Month" required type="text" ng-model="detail.forMonth" />
+                        <td class="bgColor" cssCategory="Owner"><input placeholder="Maintenance Paid" required type="number" ng-model="detail.maintPaid" />
+                        <td class="bgColor" cssCategory="Owner"><input placeholder="Maintenance Pending" required type="number" ng-model="detail.maintPending" /></td>
+                        <td><button class="newMemberBtn" ng-click="updateMaintDetails(detail)">Update</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

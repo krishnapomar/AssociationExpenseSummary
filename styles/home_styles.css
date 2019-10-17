@@ -1,0 +1,439 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+@font-face {
+    font-family: 'nevisbold';
+    src: url('/fonts/nevis.ttf');
+}
+
+.homeHeader {
+    margin-top: 4em;
+    text-align: center;
+    color: #1c6190;
+    font-weight: bold;
+}
+
+.navbar {
+    top: 0;
+    left: 0;
+    height: 3em;
+    background-color: white;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0px 1px 3px #555;
+    position: fixed;
+    z-index: 1;
+}
+
+.navbar a {
+    font-family: 'nevisbold';
+    font-size: 1rem;
+    color: gray;
+    padding: 0.5rem 0.5rem;
+    text-decoration: none;
+    height: 40px;
+    line-height: 40px;
+}
+
+.navbar a:hover, .navbar a:focus, .navbar a:active {
+    border-bottom-style: solid;
+    border-bottom-color: #1c6190;
+    color: #1c6190;
+}
+
+.topnav-left {
+    margin-left: 5px;
+    float: left;
+    margin-right: 5px;
+}
+
+.listBtn {
+    display: none;
+    margin-left: 1em;
+    float: left;
+}
+
+.sidenavlist {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: white; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    padding-top: 5px;
+}
+
+.sidenavlist a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: black;
+    display: block;
+}
+
+.sidenavlist a:hover {
+    color: #1c6190;
+}
+
+.logoBtn {
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 0.3em;
+    float: left;
+}
+
+.listBtn:hover {
+    cursor: pointer;
+}
+
+.listBtn img {
+    width: 18px;
+    height: 18px;
+}
+
+.topnav-right {
+    color: white;
+    float: right;
+    margin-right: 1em;
+}
+
+/**Login Page*/
+
+.loginHeader {
+    margin-top: 5em;
+    text-align: center;
+    color: #1c6190;
+    font-weight: bold;
+}
+
+.loginBtnWrapper {
+    margin-top: 5em;
+    text-align: center;
+}
+
+.loginBtn {
+    margin: auto;
+    display: flex;
+    background-color: white;
+    color: #1c6190;
+    font-size: 1em;
+    border: none;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    box-shadow: 0px 1px 5px #C0C0C0;
+    text-align: center;
+    border-radius: 5px;
+    align-items: center;
+}
+
+    .loginBtn:visited {
+        background-color: #1c6190;
+        color: white;
+    }
+
+    .loginBtn:focus {
+        background-color: #1c6190;
+        color: white;
+    }
+
+    .loginBtn:hover {
+        background-color: #1c6190;
+        color: white;
+    }
+
+    .loginBtn img {
+        width: 25px;
+        height: 25px;
+    }
+
+.header {
+    color: #33b5e5;
+    text-align: center;
+}
+
+hr {
+    border: thick;
+    border-top: 1px solid;
+    color: #fff;
+    background-color: lightgrey;
+    height: 1px;
+    width: 30em;
+}
+
+.topnav-right {
+    color: white;
+    float: right;
+    margin-right: 1em;
+}
+
+.profileBtn {
+    float: right;
+    right: 0;
+    position: fixed;
+    margin-right: 0.1em;
+}
+
+.profileBtn img {
+    max-width: 40px;
+    border-radius: 50%;
+    margin-right: 0.5em;
+}
+
+.profileBtn:hover {
+    cursor: pointer;
+}
+
+.profileBtn:hover, .profileBtn:active, .profileBtn:focus {
+    border-bottom: none !important;
+}
+
+/** Summary Page*/
+.cardContainer {
+    margin-top: 4em;
+    margin-left: 2em;
+    margin-right: 2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(185px, 0fr));
+    grid-gap: 2em;
+}
+
+.card {
+    box-shadow: 0px 1px 5px #555;
+    background-color: white;
+    border-radius: 0.2em;
+}
+
+.corpusCardContainer {
+    margin-top: 4em;
+    margin-left: 2em;
+    margin-right: 2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 0fr));
+    grid-gap: 1em;
+}
+
+.summaryItem {
+    font-size: 1em;
+    padding: 5px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-color: #1c6190;
+}
+
+.corpusSummaryItem {
+    font-size: 1em;
+    padding: 5px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: #1c6190;
+    width: 100px;
+}
+
+.amountHeader {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.receivedHeader, .expenditureHeader .expenseTypeHeader, .expenseHeader {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.totalAmountHeader {
+    text-align: center;
+}
+
+.totalAmountExpenditure {
+    color: red;
+    font-size: large;
+    text-align: center;
+}
+
+.errorMessage {
+    color: red;
+    font-size: large;
+    text-align: center;
+    font-weight: bold;
+    left: 0;
+    line-height: 200px;
+    margin-top: -100px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
+    .totalCorpusAmountExpenditure {
+        color: red;
+        font-size: large;
+        text-align: center;
+        padding: 10px;
+    }
+
+.totalAmountExpenditure:hover, .totalAmountReceived:hover, .totalCorpusAmountReceived:hover, .totalCorpusAmountExpenditure:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.totalAmountReceived {
+    color: dodgerblue;
+    font-size: large;
+    text-align: center;
+}
+
+.totalCorpusAmountReceived {
+    color: dodgerblue;
+    font-size: large;
+    text-align: center;
+    padding: 10px;
+}
+
+/** End of Summary Page*/
+/** Expense Page*/
+.expensesContainer {
+    margin-top: 4em;
+    margin-left: 2em;
+    margin-right: 2em;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.expenseType{
+    padding: 8px;
+    text-align: right;
+}
+
+.expenseAmount {
+    padding: 8px;
+    color: red;
+    text-align: center;
+}
+
+.totalExpenses {
+    font-weight: bold;
+    color: white;
+    background-color: #1c6190;
+}
+
+/** Fund page*/
+.bgColorAmount[amountPending="0"] {
+    background-color: forestgreen;
+}
+
+.bgColorAmount:not([amountPending='0']) {
+    background-color: red;
+}
+
+.bgColor[cssCategory="Summary"] {
+    background-color: darkgrey;
+}
+
+.bgColor[cssCategory="Owner"] {
+    color: black;
+    padding: 5px;
+    border-style: groove;
+}
+
+.ownerDetailHeader {
+    width: 10em;
+}
+
+.ownerDetailsContainer {
+    display: inline-block;
+    margin-left: 1em;
+    margin-top: 3.25em;
+}
+
+.ownerDetailsView {
+    margin-bottom: 0.25em;
+    border-bottom-style: groove;
+    color: white;
+    width: 4em;
+    text-align: center;
+}
+
+.ownerDetailsHeaderView {
+    position: relative;
+    padding: 5px;
+    font-weight: bold;
+    color: white;
+    background-color: #1c6190;
+    margin-bottom: 0.5em;
+    border-style: double;
+    text-align: center;
+}
+
+.newMemberBtn {
+    background-color: blueviolet;
+    color: white;
+    font-size: 1em;
+    border-radius: 5px;
+    border: none;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    padding: 5px;
+    margin: 0.25em;
+}
+
+.memberFormBackground {
+    margin-top: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+    background-color: lightgray;
+    border: groove;
+    position: fixed;
+}
+/* End of Funds page*/
+
+.profilePic img {
+    max-width: 50px;
+    border-radius: 50%;
+    float: left;
+    margin-top: 0.5em;
+    margin-right: 0.5em;
+}
+
+.ansProfilePic img {
+    max-width: 40px;
+    border-radius: 50%;
+}
+
+.spinner {
+    position: fixed;
+    z-index: 999999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.spinner img {
+    width: 100px;
+    height: 100px;
+}
+
+@media (max-width: 800px) {
+    .navbar a {
+        font-size: 0.75em;
+    }
+}

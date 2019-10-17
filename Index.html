@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<html ng-app="AllowaAPP">
+<title>ALOWA - Avani Layout Owners Welfare Association</title>
+<head>
+    <meta charset="UTF-8" />
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.angularjs.org/1.6.1/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.1/angular-route.min.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+    <script src="scripts/allowa-js.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/home_styles.css" />
+    <link rel="icon" href="images/askkk_logo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="navbar" id="navbar">
+        <div class="logoBtn">
+            <img src="images/Logo.png" />
+        </div>
+        <div class="topnav-left">
+            <a href="Summary">Summary</a>
+        </div>
+        <div class="topnav-left">
+            <a href="Maintenance">Maintenance</a>
+        </div>
+        <div class="topnav-left">
+            <a href="CorpusFund">Corpus Fund</a>
+        </div>
+        <div class="topnav-left">
+            <a href="CASites">CA-Sites</a>
+        </div>
+        <div class="topnav-left">
+            <a href="Owners">Plot Owners</a>
+        </div>
+        <div class="topnav-left">
+            <a href="Admin">Admin</a>
+        </div>
+        <a class="profileBtn" href="Login">
+            <img async=on id="userProfilePic" src="images/avatar.png" />
+        </a>
+    </div>
+    <div ng-view></div>
+</body>
+</html>

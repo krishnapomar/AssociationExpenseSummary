@@ -1,0 +1,25 @@
+﻿<div>
+    <div class="spinner" id="spinner">
+        <img src="../images/spinner.gif" />
+    </div>
+    <div id="bodyContainer">
+        <div class="ownerDetailsContainer">
+            <table>
+                <tr class="ownerDetailsHeaderView">
+                    <th class="ownerDetailHeader">A/C #</th>
+                    <th class="ownerDetailHeader">Paid Amount<br />
+                    <th class="ownerDetailHeader">Pending Amount</th>
+                    <th class="ownerDetailHeader">Owner</th>
+                    <th class="ownerDetailHeader">Plot #</th>
+                </tr>
+                <tr class="ownerDetailsView" data-ng-repeat="detail in ownerDetails">
+                    <td class="bgColorAmount" amountPending="{{detail.pendingAmount}}">{{detail.ownerAccountNo}}</td>
+                    <td class="bgColorAmount" amountPending="{{detail.pendingAmount}}">&#x20B9;{{detail.paidAmount}}</td>
+                    <td class="bgColorAmount" amountPending="{{detail.pendingAmount}}">&#x20B9;{{detail.pendingAmount}}</td>
+                    <td class="bgColorAmount" amountPending="{{detail.pendingAmount}}">{{detail.ownerName}}</td>
+                    <td class="bgColorAmount" amountPending="{{detail.pendingAmount}}">{{detail.ownerPlotNo}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div>
+    <div class="spinner" id="spinner">
+        <img src="../images/spinner.gif" />
+    </div>
+    <div id="bodyContainer">
+        <div class="corpusCardContainer">
+            <div class="card">
+                <div class="summaryItem">Corpus Fund Received</div>
+                <div class="totalCorpusAmountReceived" ng-click="receivedBtnClick()">&#x20B9;{{totalCAFundReceived}}</div>
+            </div>
+            <div class="card" ng-repeat="item in caSiteExpensesSummary">
+                <div class="summaryItem">{{item.Type}} Expenses</div>
+                <div class="totalCorpusAmountExpenditure" ng-click="caSiteExpensesClick(item.Type)">&#x20B9;{{item.TotalSpent}}</div>
+            </div>
+        </div>
+    </div>
+</div>
