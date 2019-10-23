@@ -1,8 +1,4 @@
-﻿<div>
-    <div class="spinner" id="spinner">
-        <img src="../images/spinner.gif" />
-    </div>
-    <div id="bodyContainer">
+﻿    <div id="bodyContainer">
         <div class="ownerDetailsContainer">
             <table>
                 <tr class="ownerDetailsHeaderView">
@@ -13,7 +9,7 @@
                     <th class="ownerDetailHeader">Email ID</th>
                     <th class="ownerDetailHeader">Resident</th>
                 </tr>
-                <tr class="ownerDetailsView" data-ng-repeat="detail in ownersList">
+                <tr class="ownerDetailsView" data-ng-repeat="detail in ownerDetails">
                     <td class="bgColor" cssCategory="Owner">{{detail.ownerAccountNo}}</td>
                     <td class="bgColor" cssCategory="Owner">{{detail.ownerName}}</td>
                     <td class="bgColor" cssCategory="Owner">{{detail.ownerPlotNo}}</td>
@@ -35,4 +31,3 @@
             </form>
         </div>
     </div>
-</div>

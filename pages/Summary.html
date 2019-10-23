@@ -1,3 +1,28 @@
-﻿<div>
-
+﻿<div id="bodyContainer">
+    <div class="ownerDetailsContainer">
+        <table>
+            <tr class="ownerDetailsHeaderView">
+                <th class="ownerDetailHeader">Account #</th>
+                <th class="ownerDetailHeader">Name</th>
+                <th class="ownerDetailHeader">Plot #</th>
+                <th class="ownerDetailHeader">Maintenance Paid</th>
+                <th class="ownerDetailHeader">Corpus Paid</th>
+                <th class="ownerDetailHeader">CA-Sites Paid</th>
+                <th class="ownerDetailHeader">Maintenance Pending</th>
+                <th class="ownerDetailHeader">Corpus Pending</th>
+                <th class="ownerDetailHeader">CA-Sites Pending</th>
+            </tr>
+            <tr class="ownerDetailsView" data-ng-repeat="detail in ownerDetails">
+                <td class="bgColor" cssCategory="Owner">{{detail.ownerAccountNo}}</td>
+                <td class="bgColor" cssCategory="Owner">{{detail.ownerName}}</td>
+                <td class="bgColor" cssCategory="Owner">{{detail.ownerPlotNo}}</td>
+                <td class="bgColor" cssCategory="Owner">{{detail.maintenanceSummary.paid}}</td>
+                <td class="bgColor" cssCategory="Owner">{{detail.casites.paid}}</td>
+                <td class="bgColor" cssCategory="Owner">{{detail.corpusFund.paid}}</td>
+                <td class="bgColorAmount" amountPending="{{detail.maintenanceSummary.pending}}">{{detail.maintenanceSummary.pending}}</td>
+                <td class="bgColorAmount" amountPending="{{detail.casites.pending}}">{{detail.casites.pending}}</td>
+                <td class="bgColorAmount" amountPending="{{detail.corpusFund.pending}}">{{detail.corpusFund.pending}}</td>
+            </tr>
+        </table>
+    </div>
 </div>

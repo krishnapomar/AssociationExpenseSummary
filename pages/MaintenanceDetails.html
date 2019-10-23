@@ -1,0 +1,20 @@
+﻿<div id="bodyContainer">
+    <div class="ownerDetailsContainer">
+        <table>
+            <tr class="ownerDetailsHeaderView">
+                <th class="ownerDetailHeader">A/C #</th>
+                <th class="ownerDetailHeader">Paid Amount<br />
+                <th class="ownerDetailHeader">Pending Amount</th>
+                <th class="ownerDetailHeader">Owner</th>
+                <th class="ownerDetailHeader">Plot #</th>
+            </tr>
+            <tr class="ownerDetailsView" data-ng-repeat="detail in ownerDetails">
+                <td class="bgColorAmount" amountPending="{{detail.maintenance[forMonth].pending}}">{{detail.ownerAccountNo}}</td>
+                <td class="bgColorAmount" amountPending="{{detail.maintenance[forMonth].pending}}">&#x20B9;{{detail.maintenance[forMonth].paid}}</td>
+                <td class="bgColorAmount" amountPending="{{detail.maintenance[forMonth].pending}}">&#x20B9;{{detail.maintenance[forMonth].pending}}</td>
+                <td class="bgColorAmount" amountPending="{{detail.maintenance[forMonth].pending}}">{{detail.ownerName}}</td>
+                <td class="bgColorAmount" amountPending="{{detail.maintenance[forMonth].pending}}">{{detail.ownerPlotNo}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

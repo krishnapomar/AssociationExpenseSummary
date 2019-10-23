@@ -1,17 +1,30 @@
-﻿<div>
-    <div class="spinner" id="spinner">
-        <img src="../images/spinner.gif" />
-    </div>
-    <div id="bodyContainer">
+﻿<div id="bodyContainer">
+    <div class="fundsPage">
         <div class="corpusCardContainer">
             <div class="card">
                 <div class="summaryItem">CA-Sites Received</div>
-                <div class="totalCorpusAmountReceived" ng-click="receivedBtnClick()">&#x20B9;{{totalCAFundReceived}}</div>
-            </div>
-            <div class="card" ng-repeat="item in caSiteExpensesSummary">
-                <div class="summaryItem">{{item.Type}} Expenses</div>
-                <div class="totalCorpusAmountExpenditure" ng-click="caSiteExpensesClick(item.Type)">&#x20B9;{{item.TotalSpent}}</div>
+                <div class="totalCorpusAmountReceived" ng-click="receivedBtnClick()">&#x20B9;{{caSitesSummary['TotalReceived']}}</div>
             </div>
         </div>
+        <table class="expensesContainer">
+            <tr>
+                <th class="expenseHeader">Date</th>
+                <th class="expenseHeader">Expense Type</th>
+                <th class="expenseHeader">Remarks</th>
+                <th class="expenseHeader">Expense Amount</th>
+            </tr>
+            <tr ng-repeat="item in caSitesExpenses">
+                <td class="expenseType">{{item.Date}}</td>
+                <td class="expenseType">{{item.ExpenseType}}</td>
+                <td class="expenseType">{{item.Remarks}}</td>
+                <td class="expenseAmount">&#x20B9;{{item.ExpenseAmount}}</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td class="expenseType">Total Expenses</td>
+                <td class="totalExpenses">&#x20B9; {{caSitesSummary['TotalSpent']}}</td>
+            </tr>
+        </table>
     </div>
 </div>

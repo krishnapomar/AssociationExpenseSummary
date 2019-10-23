@@ -1,0 +1,23 @@
+<div>
+    <div class="spinner" id="spinner">
+        <img src="../images/spinner.gif" />
+    </div>
+    <div id="bodyContainer">
+        <div>
+            <table  class="expensesContainer">
+                <tr>
+                    <th class="expenseTypeHeader">Expense Type</th>
+                    <th class="expenseHeader">Expense Amount</th>
+                </tr>
+                <tr ng-repeat="item in maintExpenses">
+                    <td class="expenseType">{{item.ExpenseType}}</td>
+                    <td class="expenseAmount">&#x20B9;{{item.ExpenseAmount}}</td>
+                </tr>
+                <tr>
+                    <td class="expenseType">Total Expenses</td>
+                    <td class="totalExpenses">&#x20B9; {{totalExpenses}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

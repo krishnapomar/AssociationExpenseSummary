@@ -127,8 +127,11 @@
     <Content Include="packages\Microsoft.Net.Compilers.2.2.0\tools\VBCSCompiler.exe" />
     <Content Include="pages\Admin.html" />
     <Content Include="pages\CorpusFund.html" />
+    <Content Include="pages\CASitesDetail.html" />
     <Content Include="pages\Expenses.html" />
-    <Content Include="pages\OwnerPaymentDetails.html" />
+    <Content Include="pages\CorpusFundDetails.html" />
+    <Content Include="pages\MaintenanceDetails.html" />
+    <Content Include="pages\Dashboard.html" />
     <Content Include="pages\Summary.html" />
     <Content Include="pages\CASites.html" />
     <Content Include="pages\Owners.html" />

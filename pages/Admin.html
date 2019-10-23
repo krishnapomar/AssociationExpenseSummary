@@ -1,63 +1,88 @@
-﻿<div>
+﻿<div id="bodyContainer">
     <div class="ownerDetailsContainer">
         <label class="errorMessage" id="errorMessage">{{unAuthorizedMessage}}</label>
         <div id="adminForm">
-            <div>
-                <label class="expenseHeader">Corpus & CA-Sites Details</label>
-                <button class="newMemberBtn" ng-click="showHideCACorpusFundDetails()">Show/Hide</button>
-                <table id="CACorpusFundDetails">
+            <div class="adminContainer">
+                <div class="adminCard">
+                    <label class="adminExpenseHeader" ng-click="showHideOwnerPaymentDetails()">Owner Payment Details</label>
+                    <table id="OwnerPaymentDetails">
+                        <tr class="ownerDetailsHeaderView">
+                            <th>Account #</th>
+                            <th>Corpus Paid</th>
+                            <th>Corpus Pending</th>
+                            <th>CA-Sites Paid</th>
+                            <th>CA-Sites Pending</th>
+                            <th>Month</th>
+                            <th>Maintenance Paid</th>
+                            <th>Maintenance Pending</th>
+                        </tr>
+                        <tr class="ownerDetailsView" data-ng-repeat="detail in ownerDetails">
+                            <td class="adminOwner">{{detail.ownerAccountNo}}</td>
+                            <td><input placeholder="Corpus Paid" required type="number" ng-model="detail.corpusPaid" />
+                            <td><input placeholder="Corpus Pending" required type="number" ng-model="detail.corpusPending" /></td>
+                            <td><input placeholder="CA-Sites Paid" required type="number" ng-model="detail.caPaid" /></td>
+                            <td><input placeholder="CA-Sites Pending" required type="number" ng-model="detail.caPending" /></td>
+                            <td><input placeholder="For Month" required type="text" ng-model="detail.forMonth" />
+                            <td><input placeholder="Maintenance Paid" required type="number" ng-model="detail.maintPaid" />
+                            <td><input placeholder="Maintenance Pending" required type="number" ng-model="detail.maintPending" /></td>
+                            <td><button class="newMemberBtn" ng-click="updateOwnerPaymentDetails(detail)">Update</button></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="adminCard">
+                    <label class="adminExpenseHeader" ng-click="showHideCorpusFundExpensesDetails()">Corpus Fund Expenses</label>
+                    <table id="CorpusFundExpenses">
+                        <tr class="ownerDetailsHeaderView">
+                            <th>Expense Date</th>
+                            <th>Expense Type</th>
+                            <th>Expense Amount</th>
+                            <th>Remarks</th>
+                        </tr>
+                        <tr>
+                            <td><input placeholder="Expense Date" required type="date" ng-model="detail.corpusExpenseDate" />
+                            <td><input placeholder="Expense Type" required type="text" ng-model="detail.corpusExpenseType" /></td>
+                            <td><input placeholder="Expense Amount" required type="number" ng-model="detail.corpusExpenseAmount" /></td>
+                            <td><input placeholder="Remarks" type="text" ng-model="detail.corpusExpenseRemarks" /></td>
+                            <td><button class="newMemberBtn" ng-click="corpusFundExpense(detail)">Submit</button></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="adminCard">
+                    <label class="adminExpenseHeader" ng-click="showHideCASiteExpensesDetails()">CA-Site Expenses</label>
+                    <table id="CASiteExpenses">
+                        <tr class="ownerDetailsHeaderView">
+                            <th>Expense Date</th>
+                            <th>Expense Type</th>
+                            <th>Expense Amount</th>
+                            <th>Remarks</th>
+                        </tr>
+                        <tr>
+                            <td><input placeholder="Expense Date" required type="date" ng-model="detail.caSiteExpenseDate" />
+                            <td><input placeholder="Expense Type" required type="text" ng-model="detail.caSiteExpenseType" /></td>
+                            <td><input placeholder="Expense Amount" required type="number" ng-model="detail.caSiteExpenseAmount" /></td>
+                            <td><input placeholder="Remarks" type="text" ng-model="detail.caSiteExpenseRemarks" /></td>
+                            <td><button class="newMemberBtn" ng-click="caSiteExpense(detail)">Submit</button></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="adminCard">
+                <label class="adminExpenseHeader"  ng-click="showHideMaintenanceExpensesDetails()">Maintenance Expenses</label>
+                <table id="MaintenanceExpenses">
                     <tr class="ownerDetailsHeaderView">
-                        <th class="ownerDetailHeader">Account #</th>
-                        <th class="ownerDetailHeader">Corpus Paid Amount</th>
-                        <th class="ownerDetailHeader">Corpus Pending Amount</th>
-                        <th class="ownerDetailHeader">CA-Sites Paid Amount</th>
-                        <th class="ownerDetailHeader">CA-Sites Pending Amount</th>
-                    </tr>
-                    <tr class="ownerDetailsView" data-ng-repeat="detail in ownersList">
-                        <td class="bgColor" cssCategory="Owner">{{detail.ownerAccountNo}}</td>
-                        <td class="bgColor" cssCategory="Owner"><input placeholder="Corpus Paid" required type="number" ng-model="detail.corpusPaid" />
-                        <td class="bgColor" cssCategory="Owner"><input placeholder="Corpus Pending" required type="number" ng-model="detail.corpusPending" /></td>
-                        <td class="bgColor" cssCategory="Owner"><input placeholder="CA-Sites Paid" required type="number" ng-model="detail.casitePaid" /></td>
-                        <td class="bgColor" cssCategory="Owner"><input placeholder="CA-Sites Pending" required type="number" ng-model="detail.casitePending" /></td>
-                        <td><button class="newMemberBtn" ng-click="updateFundDetails(detail)">Update</button></td>
-                    </tr>
-                </table>
-            </div>
-            <div>
-                <label class="expenseHeader">Corpus Fund Expenses</label>
-                <button class="newMemberBtn" ng-click="showHideCorpusFundExpensesDetails()">Show/Hide</button>
-                <table id="CorpusFundExpenses">
-                    <tr class="ownerDetailsHeaderView">
-                        <th class="ownerDetailHeader">Expense Date</th>
-                        <th class="ownerDetailHeader">Expense Type</th>
-                        <th class="ownerDetailHeader">Expense Amount</th>
+                        <th>Expense Date</th>
+                        <th>Expense Type</th>
+                        <th>Expense Amount</th>
+                        <th>Remarks</th>
                     </tr>
                     <tr>
-                        <td class="bgColor" cssCategory="Owner"><input placeholder="Expense Date" required type="date" ng-model="detail.date" />
-                        <td class="bgColor" cssCategory="Owner"><input placeholder="Expense Type" required type="text" ng-model="detail.expenseType" /></td>
-                        <td class="bgColor" cssCategory="Owner"><input placeholder="Expense Amount" required type="number" ng-model="detail.expenseAmount" /></td>
-                        <td><button class="newMemberBtn" ng-click="corpusFundExpense(detail)">Update</button></td>
+                        <td><input placeholder="Expense Date" required type="date" ng-model="detail.maintExpenseDate" />
+                        <td><input placeholder="Expense Type" required type="text" ng-model="detail.maintExpenseType" /></td>
+                        <td><input placeholder="Expense Amount" required type="number" ng-model="detail.maintExpenseAmount" /></td>
+                        <td><input placeholder="Remarks" type="text" ng-model="detail.maintExpenseRemarks" /></td>
+                        <td><button class="newMemberBtn" ng-click="maintExpense(detail)">Submit</button></td>
                     </tr>
                 </table>
-            </div>
-            <div>
-                <label class="expenseHeader">Maintenance Details</label>
-                <button class="newMemberBtn" ng-click="maintenanceDetails()">Show/Hide</button>
-                <table id="MaintenanceDetails">
-                    <tr class="ownerDetailsHeaderView">
-                        <th class="ownerDetailHeader">Account #</th>
-                        <th class="ownerDetailHeader">For Month</th>
-                        <th class="ownerDetailHeader">Maitenance Paid Amount</th>
-                        <th class="ownerDetailHeader">Maitenance Pending Amount</th>
-                    </tr>
-                    <tr class="ownerDetailsView" data-ng-repeat="detail in ownersList">
-                        <td class="bgColor" cssCategory="Owner">{{detail.ownerAccountNo}}</td>
-                        <td class="bgColor" cssCategory="Owner"><input placeholder="For Month" required type="text" ng-model="detail.forMonth" />
-                        <td class="bgColor" cssCategory="Owner"><input placeholder="Maintenance Paid" required type="number" ng-model="detail.maintPaid" />
-                        <td class="bgColor" cssCategory="Owner"><input placeholder="Maintenance Pending" required type="number" ng-model="detail.maintPending" /></td>
-                        <td><button class="newMemberBtn" ng-click="updateMaintDetails(detail)">Update</button></td>
-                    </tr>
-                </table>
+                </div>
             </div>
         </div>
     </div>
