@@ -2,12 +2,12 @@ var myApp = angular.module("AllowaAPP", ['ngRoute', 'firebase']);
 
 var config = {
     // Initialize Firebase
-    apiKey: "AIzaSyBHFzhx4ynk6nDox_f05fdPY3K_af0LiFg",
-    authDomain: "s2homes-allowa.firebaseapp.com",
-    databaseURL: "https://s2homes-allowa.firebaseio.com/",
-    projectId: "s2homes-allowa",
+    apiKey: "************",
+    authDomain: "****************",
+    databaseURL: "*****************",
+    projectId: "****************",
     storageBucket: "",
-    messagingSenderId: "419261413661"
+    messagingSenderId: "*******************"
 };
 
 firebase.initializeApp(config);
